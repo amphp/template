@@ -1,0 +1,26 @@
+{
+  "name": "amphp/template",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "...",
+      "email": "..."
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/amphp/template/issues"
+  },
+  "require": {
+    "amphp/amp": "^1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.4.0",
+    "fabpot/php-cs-fixer": "~1.9",
+    "satooshi/php-coveralls": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Amp\\Template\\": "lib/"
+    }
+  }
+}
