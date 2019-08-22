@@ -1,4 +1,7 @@
-/coverage/
-/composer.lock
-/vendor/
-/.idea/
+.vscode
+build
+composer.lock
+phpunit.xml
+vendor
+.php_cs.cache
+coverage
