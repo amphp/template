@@ -1,25 +1,45 @@
 {
-  "name": "amphp/template",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "...",
-      "email": "..."
+    "name": "amphp/template",
+    "license": "MIT",
+    "description": "Template for AMPHP libraries",
+    "authors": [{
+        "name": "...",
+        "email": "..."
+    }],
+    "support": {
+        "issues": "https://github.com/amphp/template/issues"
+    },
+    "require": {
+        "php": ">=7.0",
+        "amphp/amp": "^2"
+    },
+    "require-dev": {
+        "amphp/phpunit-util": "^1",
+        "phpunit/phpunit": "^6",
+        "amphp/php-cs-fixer-config": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amp\\Template\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Amp\\Template\\Test\\": "test"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.0"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs",
+            "@test"
+        ],
+        "cs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix -v --diff --dry-run",
+        "cs-fix": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix -v --diff",
+        "test": "@php -dzend.assertions=1 -dassert.exception=1 ./vendor/bin/phpunit --coverage-text"
     }
-  ],
-  "support": {
-    "issues": "https://github.com/amphp/template/issues"
-  },
-  "require": {
-    "amphp/amp": "^1"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.4.0",
-    "friendsofphp/php-cs-fixer": "~1.9"
-  },
-  "autoload": {
-    "psr-4": {
-      "Amp\\Template\\": "lib/"
-    }
-  }
 }
